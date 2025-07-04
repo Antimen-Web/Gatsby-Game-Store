@@ -1,0 +1,151 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    color: #fff;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px 30px;
+    border-radius: 40px;
+}
+
+.modalHeader {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.closeButton {
+    color: #4F4F4F;
+    font-size: 20px;
+    text-align: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logoLink {
+    text-align: center;
+}
+
+.inputGroup {
+    position: relative;
+    width: 100%;
+}
+
+.inputGroup input{
+    background: #1A1A1A;
+    border: none;
+    border-radius: 40px;
+    box-shadow: none;
+    color: #9c9c9c;
+    padding: 20px 20px 20px 50px;
+    width: 100%;
+}
+
+.inputGroup svg {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.submitButton {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 40px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switchFormText {
+    color: #9C9C9C;
+    font-size: 14px;
+    text-align: center;
+}
+
+.switchFormButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.headerSpacer {
+    /* Пустой элемент для выравнивания */
+}
+
+.title {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1000px) {
+    .modalContent {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .form {
+        gap: 15px;
+    }
+
+    .modalContent {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .submitButton {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .modalContent {
+        width: 310px;
+        padding: 15px;
+    }
+
+    .inputField {
+        padding: 15px 15px 15px 45px;
+    }
+
+    .inputIcon {
+        left: 15px;
+    }
+}

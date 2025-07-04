@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSans';
+  src: url('../fonts/WorkSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --border-radius: 4px;
+  --color-text: #333;
+  --color-primary: #7026b9;
+  --color-code-bg: #fff4db;
+  --color-code: #8a6534;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-lg: 18px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
+  overflow-y: scroll;
+}
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  background: #1A1A1A;
+  font-family: "WorkSans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  word-wrap: break-word;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.single a {
+  color: #fff;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.single h1, .games h1, .category h1, .cart h1 {
+  position: static;
+  left: auto;
+  width: auto;
+  height: auto;
+  font-size: 54px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cart h1 {
+  text-align: left;
+  margin: 20px 0;
+}
+h1 > b {
+  color: var(--color-primary);
+}
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+  color: #fff;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+img {
+  border-style: none;
+  max-width: 100%;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+  line-height: inherit;
+}
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: calc(var(--space-4) - 1px);
+  background: hsla(0, 0%, 0%, 0.2);
+  border: none;
+  height: 1px;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+hgroup,
+img,
+figure,
+fieldset,
+ul,
+ol,
+dl,
+dd,
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--space-4);
+}
+ul,
+ol {
+  margin-left: var(--space-4);
+  list-style-position: outside;
+  list-style-image: none;
+}
+pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+  line-height: var(--line-height-normal);
+  background: hsla(0, 0%, 0%, 0.04);
+  border-radius: var(--border-radius);
+  overflow: auto;
+  word-wrap: normal;
+  padding: var(--space-4);
+}
+b,
+strong,
+dt,
+th {
+  font-weight: bold;
+}
+li {
+  margin-bottom: calc(var(--space-4) / 2);
+}
+ol li,
+ul li {
+  padding-left: 0;
+}
+li > ol,
+li > ul {
+  margin-bottom: calc(var(--space-4) / 2);
+  margin-left: var(--space-4);
+  margin-top: calc(var(--space-4) / 2);
+}
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+li *:last-child {
+  margin-bottom: 0;
+}
+p *:last-child {
+  margin-bottom: 0;
+}
+li > p {
+  margin-bottom: calc(var(--space-4) / 2);
+}
+code {
+  font-size: 0.875rem;
+}
+kbd {
+  font-size: 0.875rem;
+}
+samp {
+  font-size: 0.875rem;
+}
+abbr {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+acronym {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+tt,
+code {
+  background-color: var(--color-code-bg);
+  border-radius: var(--border-radius);
+  color: var(--color-code);
+  font-family: var(--font-mono);
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  word-break: normal;
+}
+pre code {
+  background: none;
+}
+code:before,
+code:after,
+tt:before,
+tt:after {
+  content: "\00a0";
+  letter-spacing: -0.2em;
+}
+pre code:before,
+pre code:after,
+pre tt:before,
+pre tt:after {
+  content: none;
+}
+button {
+
+  font-size: 14px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #202020;
+  background: #fff;
+  width: fit-content;
+  padding: 14px 40px;
+  border-radius: 40px;
+  border: 1px transparent solid;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.btn:disabled {
+  opacity: 0.5;
+}
+.btn svg {
+  stroke: #1A1A1A;
+  transition: all 0.3s ease;
+}
+.btn.auth {
+  width: 100%;
+}
+.btn:hover {
+  background: #202020;
+  color: #fff;
+}
+.btn:disabled:hover {
+  background: #202020;
+  color: #fff;
+}
+.btn:hover svg {
+  stroke: #3EF1B9;
+}
+.slick-dots {
+  position: static;
+  height: 30px;
+}
+.slick-dots li button:before {
+  display: none;
+}
+.slick-dots li button {
+  width: 20px;
+  height: 10px;
+  border-radius: 100px;
+  background: #E8E8E8;
+  transition: all 0.3s ease;
+}
+.slick-dots li.slick-active button, .slick-dots li button:hover {
+  background: #1A1A1A;
+}
+.table {
+  overflow-x: auto;
+}
+.container {
+  width: 90%;
+  max-width: 1520px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .single h1, .games h1, .category h1, .cart h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .btn {
+    font-size: 14px;
+  }
+  .btn.header {
+    padding: 7px 10px;
+  }
+}

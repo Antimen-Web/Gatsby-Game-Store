@@ -1,0 +1,244 @@
+.content {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+.btns {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.prices {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+.successMessage {
+    color: green;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.sale {
+    font-size: 16px;
+    color: #9C9C9C;
+    text-decoration: line-through;
+}
+.btn {
+    width: 100%;
+}
+.btn:hover {
+    background: #101010;
+}
+.input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #9C9C9C;
+    background: none;
+    color: #9C9C9C;
+    border-radius: 40px;
+}
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.elem {
+    background: #202020;
+    box-shadow: 0px 0px 10px 0px #00000066;
+    border-radius: 40px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select_all {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+.right {
+    gap: 20px;
+    cursor: pointer;
+}
+.close {
+    cursor: pointer;
+}
+.icon {
+    background: #1A1A1A;
+    color: #fff;
+    stroke: #fff;
+    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.icon:hover, .icon.selected {
+    background: #fff;
+    color: #1A1A1A;
+    stroke: #1A1A1A;
+}
+.image {
+    aspect-ratio: 1 / 1;
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: #fff;
+}
+.image img {
+    object-fit: contain !important;
+}
+.info {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #1A1A1A;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.count span {
+    height: 100%;
+    padding: 10px;
+}
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.price h3 {
+    width: 100px;
+}
+.quantity {
+    background: transparent;
+    border: 1px solid #FFFFFF80;
+    color: #fff;
+    border-radius: 40px;
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.x {
+    width: 20px;
+    text-align: end;
+}
+.check {
+    background: #202020;
+    box-shadow: 0px 0px 10px 0px #00000066;
+    border-radius: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.h3 {
+    margin: 0;
+}
+.promocode {
+    background: #1A1A1A;
+    color: #9C9C9C;
+    padding: 20px;
+    border-radius: 40px;
+    width: 100%;
+    border: none;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+.name {
+    color: #9C9C9C;
+    font-weight: 500;
+}
+.total {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.check p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #9C9C9C;
+    margin: 0;
+}
+.payments {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+}
+.payments svg {
+    border-radius: 7px;
+}
+@media (max-width: 1130px) {
+    .content {
+        flex-direction: column;
+    }
+    .btns {
+        width: 100%;
+    }
+}
+@media (max-width: 790px) {
+    .game .right{
+        flex-direction: column;
+    }
+}
+@media (max-width: 640px) {
+    .game .left, .game.elem, .game .right{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .info {
+        max-width: 100%;
+        height: auto;
+    }
+    .bin {
+        display: none;
+    }
+    .select_all {
+        gap: 15px;
+    }
+}

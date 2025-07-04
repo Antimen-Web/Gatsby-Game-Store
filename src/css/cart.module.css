@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.number {
+    display: flex;
+    color: #9C9C9C;
+}

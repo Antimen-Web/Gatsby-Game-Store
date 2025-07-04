@@ -1,0 +1,145 @@
+.slide {
+    position: relative;
+    display: flex !important;
+    gap: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    background: #fff;
+    padding: 40px;
+}
+.thumbSlider {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 80px;
+    z-index: 10;
+}
+.thumb {
+    transition: all .5s;
+}
+.thumb img,
+.thumb :global(.gatsby-image-wrapper), :global(.slick-slide) {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: contain !important;
+    transition: all .5s;
+}
+.thumb img {
+    background: #fff;
+}
+:global(.slick-slide) {
+    padding-top: 10px;
+}
+.current_image {
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 1;
+}
+.current_image img{
+    object-fit: contain !important;
+}
+.title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Space Grotesk", serif;
+}
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 50%;
+    left: 100%;
+    transform: translateY(50%);
+    padding: 18px;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(40px);
+    margin: 20px;
+    z-index: 10;
+}
+.arrow:hover {
+    background: #fff;
+}
+.arrow.prev {
+    left: auto;
+    right: 100%;
+}
+.arrow svg {
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+    transition: all 0.3s ease;
+}
+.arrow:hover svg{
+    fill: #000;
+}
+.slider :global(.slick-prev), .slider :global(.slick-next) {
+    display: none !important;
+}
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.lists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.info_title {
+    font-size: 14px;
+    font-weight: 500;
+}
+.info_item {
+    margin: 0;
+    text-transform: capitalize;
+    border-radius: 15px;
+    padding: 4px 10px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1A1A1A;
+    height: fit-content;
+}
+.price {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@media (max-width: 1300px) {
+    .current_image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .current_image {
+        max-height: 300px;
+    }
+}

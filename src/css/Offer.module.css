@@ -1,0 +1,123 @@
+.offer {
+    padding: 40px;
+    border-radius: 40px;
+    background:
+            radial-gradient(circle at 10% center, rgba(8, 168, 193, 0.4) 0%, rgba(8, 168, 193, 0) 30%),
+            radial-gradient(circle at 75% center, rgba(125, 8, 193, 0.4) 0%, rgba(125, 8, 193, 0) 30%),
+            linear-gradient(0deg, rgba(16, 16, 16, 0.8) 0%, rgba(16, 16, 16, 0.62328) 44.57%, rgba(16, 16, 16, 0.36912) 61.47%, rgba(16, 16, 16, 0.13416) 81.25%, rgba(16, 16, 16, 0) 100%);
+    box-shadow: 0px 0px 10px 0px #00000066;
+    margin-bottom: 40px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+    overflow: hidden;
+    height: 440px;
+}
+.h2, .h3 {
+    margin: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+}
+.btns {
+    display: flex;
+    gap: 20px;
+}
+.btns :global(.btn) {
+    width: fit-content;
+}
+.input {
+    padding: 20px;
+    border: 1px solid #9C9C9C;
+    background: none;
+    color: #9C9C9C;
+    border-radius: 40px;
+}
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #F2F2F2;
+    margin: 0;
+}
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.offer svg {
+    fill: #fff;
+    transition: all 0.3s ease;
+}
+.offer :global(.btn):hover svg {
+    fill: #9C9C9C;
+}
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 1000px) {
+    .btns {
+        flex-direction: column;
+    }
+    .btns :global(.btn) {
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    .offer {
+        margin: 40px auto;
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+        gap: 40px;
+        background:
+                radial-gradient(circle at center 90%, rgba(8, 168, 193, 0.4) 0%, rgba(8, 168, 193, 0) 30%),
+                radial-gradient(circle at center 25%, rgba(125, 8, 193, 0.4) 0%, rgba(125, 8, 193, 0) 30%),
+                linear-gradient(90deg, rgba(16, 16, 16, 0.8) 0%, rgba(16, 16, 16, 0.62328) 44.57%, rgba(16, 16, 16, 0.36912) 61.47%, rgba(16, 16, 16, 0.13416) 81.25%, rgba(16, 16, 16, 0) 100%);
+
+    }
+    .input {
+        width: auto;
+    }
+    .logo {
+        order: -1;
+        max-height: 200px;
+    }
+    .image {
+        width: 100%;
+        position: relative;
+        transform: none;
+    }
+    .content {
+        z-index: 1;
+    }
+
+}
+@media (max-width: 500px) {
+    .content {
+        width: 100%;
+    }
+    .offer {
+        padding: 10px;
+    }
+    .logo {
+        height: 100px;
+    }
+}

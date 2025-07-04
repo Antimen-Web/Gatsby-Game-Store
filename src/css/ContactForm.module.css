@@ -1,0 +1,44 @@
+.h3 {
+    margin: 0;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.btns :global(.btn) {
+    width: fit-content;
+}
+.input {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #9C9C9C;
+    background: none;
+    color: #9C9C9C;
+    border-radius: 40px;
+}
+
+.description {
+    font-weight: 500;
+    font-size: 16px;
+    color: #9C9C9C;
+    margin: 0;
+}
+
+.successMessage {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .input {
+        width: auto;
+    }
+}

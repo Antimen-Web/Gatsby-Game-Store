@@ -1,0 +1,85 @@
+.filters {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+.sale_filter {
+    display: flex;
+    align-items: center;
+}
+.sale_filter label {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.sale_filter input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.checkbox {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #101010;
+    margin: 0;
+    border-radius: 5px;
+}
+.sale_filter input:checked + .checkbox {
+    background: #fff;
+}
+
+.sale_filter input:checked + .checkbox::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border: solid #101010;
+    border-width: 0 2px 2px 0;
+}
+.sale_filter input:not(:checked) + .checkbox:hover {
+    border-color: #007bff;
+}
+.sorting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sortingSelect {
+    appearance: none;
+    padding: 8px 32px 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #101010;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpolyline%20points%3D%276%209%2012%2015%2018%209%27/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    min-width: 180px;
+}
+
+
+.sortingSelect:hover {
+    border-color: #00FAAC;
+}
+
+.sortingSelect:focus {
+    outline: none;
+    border-color: #00FAAC;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+@media (max-width: 500px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+}
