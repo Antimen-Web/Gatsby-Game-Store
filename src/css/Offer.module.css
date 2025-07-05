@@ -69,7 +69,6 @@
 .image {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
 }
 @media (max-width: 1000px) {
     .btns {
